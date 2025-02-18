@@ -1,0 +1,18 @@
+[user]
+name = "Alec Snyder"
+email = "alec.snyder@at-bay.com"
+
+[ui]
+default-command = ["status"]
+editor = "vim"
+
+[aliases]
+bk = ["bookmark"]
+push = ["git", "push"]
+pull = ["git", "fetch"]
+fork = ["new", "--after", "trunk()", "--before", "@", "--before", "alec/_wkspace", "--no-edit"]
+
+[git]
+push-new-bookmarks = true
+auto-local-bookmark = true
+push-bookmark-prefix = "alec/"
