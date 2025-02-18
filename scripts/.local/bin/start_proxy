@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh -TND 4966 -p 2222 -L 4566:localhost:4566 alecsnyder@10.0.0.4

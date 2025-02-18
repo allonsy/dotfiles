@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export HTTPS_PROXY=socks5://localhost:4966
+k9s $@

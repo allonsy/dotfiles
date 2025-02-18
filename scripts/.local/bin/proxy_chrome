@@ -1,0 +1,5 @@
+#!/bin/bash
+export SOCKS_SERVER=localhost:4966
+export SOCKS_VERSION=5
+
+google-chrome-stable & exit

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+jj rebase --after alec/_wkspace --after 'all:alec/_wkspace-'
