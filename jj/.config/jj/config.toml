@@ -10,7 +10,7 @@ editor = "vim"
 bk = ["bookmark"]
 push = ["git", "push"]
 pull = ["git", "fetch"]
-fork = ["new", "--after", "trunk()", "--before", "@", "--before", "alec/_wkspace", "--no-edit"]
+fork = ["new", "--after", "trunk()", "--before", "@", "--no-edit"]
 
 [git]
 push-new-bookmarks = true
