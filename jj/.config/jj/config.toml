@@ -11,8 +11,14 @@ bk = ["bookmark"]
 push = ["git", "push"]
 pull = ["git", "fetch"]
 fork = ["new", "--after", "trunk()", "--before", "@", "--no-edit"]
+clean = ["new", "all:bookmarks() & mine()"]
 
 [git]
 push-new-bookmarks = true
 auto-local-bookmark = true
 push-bookmark-prefix = "alec/"
+
+[merge-tools.pycharm]
+program = "pycharm"
+merge-args = ["merge", "$left", "$right", "$base", "$output"]
+edit-args = ["diff", "$left", "$right"]
