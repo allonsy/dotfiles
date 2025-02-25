@@ -18,6 +18,4 @@ bindkey '^N' history-beginning-search-forward
 PROMPT='[%F{red}%n%f: %F{blue}%~%f]
 %F{yellow}>>>%f '
 
-export PATH=~/.local/bin:$PATH
-
 source ~/.config/zsh/aliases.zsh

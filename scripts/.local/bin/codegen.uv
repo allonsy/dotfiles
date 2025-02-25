@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+if [ ! -f .codegen_version ]; then
+	echo "Unable to locate file .codegen_version"
+	exit 1
+fi
+
+VERSION=$(awk '{print $NF}' .codegen_version | cut -c2-)
+echo "running codegen $VERSION"
+
+uvx -p 3.9.2 --with setuptools codegen@${VERSION} $@

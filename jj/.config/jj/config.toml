@@ -5,6 +5,7 @@ email = "alec.snyder@at-bay.com"
 [ui]
 default-command = ["status"]
 editor = "vim"
+conflict-marker-style = "git"
 
 [aliases]
 bk = ["bookmark"]
@@ -17,6 +18,7 @@ clean = ["new", "all:bookmarks() & mine()"]
 push-new-bookmarks = true
 auto-local-bookmark = true
 push-bookmark-prefix = "alec/"
+subprocess = true
 
 [merge-tools.pycharm]
 program = "pycharm"
