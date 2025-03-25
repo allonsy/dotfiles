@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Ensure exactly one argument is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <branch-name>"
+    exit 1
+fi
+
+BRANCH_NAME=$1
+
+# Get the GitHub repository URL
+REPO_URL=$(git config --get remote.origin.url)
+
+# Extract GitHub repository path
+if [[ "$REPO_URL" =~ ^git@github.com:(.*)(.git)?$ ]]; then
+    # Convert SSH URL to GitHub path (org/repo)
+    REPO_PATH="${BASH_REMATCH[1]}"
+elif [[ "$REPO_URL" =~ ^https://github.com/(.*).git$ ]]; then
+    # Extract path from HTTPS URL
+    REPO_PATH="${BASH_REMATCH[1]}"
+else
+    echo "Error: Could not determine repository path from remote URL: $REPO_URL"
+    exit 1
+fi
+
+# Construct the PR URL
+PR_URL="https://github.com/$REPO_PATH/pull/new/$BRANCH_NAME"
+
+# Open the GitHub PR creation page in the default browser
+echo "Opening PR: $PR_URL"
+open "$PR_URL"
+
