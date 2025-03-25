@@ -1,4 +1,5 @@
 alias ls='ls --color=auto '
+alias ll='ls -la '
 alias chmox='chmod +x '
 alias pac='sudo pacman -S '
 alias req='uv sync --all-groups'
