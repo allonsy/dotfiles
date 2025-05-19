@@ -18,7 +18,6 @@ clean = ["new", "all:bookmarks() & mine()"]
 push-new-bookmarks = true
 auto-local-bookmark = true
 push-bookmark-prefix = "alec/"
-subprocess = true
 
 [merge-tools.pycharm]
 program = "pycharm"

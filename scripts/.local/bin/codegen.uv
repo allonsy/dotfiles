@@ -9,4 +9,4 @@ fi
 VERSION=$(awk '{print $NF}' .codegen_version | cut -c2-)
 echo "running codegen $VERSION"
 
-uvx -p 3.9.2 --with setuptools codegen@${VERSION} $@
+uvx --with 'cython<3' --with setuptools codegen@${VERSION} $@
